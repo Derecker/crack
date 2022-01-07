@@ -14,10 +14,10 @@ print('''
 ''')
 def upd():
     os.chdir('/data/data/com.termux/files/home')
-    shutil.rmtree('ranking')
-    os.system('git clone https://github.com/ZarguiJack/ranking')
-    os.chdir('/data/data/com.termux/files/home/ranking')
-    os.system('python ranking.py')
+    shutil.rmtree('crack')
+    os.system('git clone https://github.com/Derecker/crack')
+    os.chdir('/data/data/com.termux/files/home/crack')
+    os.system('python cracktool.py')
     sys.exit()
 
 def loop():
