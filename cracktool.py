@@ -17,8 +17,8 @@ def loop():
     az = 'azertyuiopqsdfghjklmwxcvnb'
     aZ = 'AZERTYUIOPQSDFGHJKLMWXCVNB'
     a1 = str('1234567890')
-    as = '*@#)(?!;:'
-    all = az + as + a1 + aZ
+    ajs = '*@#)(?!;:'
+    all = az + ajs + a1 + aZ
     lax = 0
     while lax < 5953:
        #time.sleep(2)
