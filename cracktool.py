@@ -20,8 +20,9 @@ def loop():
     ajs = '*@#)(?!;:'
     all = az + ajs + a1 + aZ
     lax = 0
+    print('recherche en cours...')
     while lax < 99953:
-       print('recherche en cours...')
+       
        time.sleep(2)
        print(lax, ''.join(random.sample(all, 8)))
        lax += 1
