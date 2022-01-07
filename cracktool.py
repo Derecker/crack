@@ -1,4 +1,4 @@
-import smtplib, shutil, sys, ssl, os, getpass,time
+import smtplib, shutil, sys, ssl, os, getpass,time, random
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
@@ -14,10 +14,15 @@ print('''
 ''')
 
 def loop():
-    lax = 6
-    while lax < 9:
-       time.sleep(2)
-       print('<exeption>')
+    az = 'azertyuiopqsdfghjklmwxcvnb'
+    aZ = 'AZERTYUIOPQSDFGHJKLMWXCVNB'
+    a1 = str('1234567890')
+    as = '*@#)(?!;:'
+    all = az + as + a1 + aZ
+    lax = 0
+    while lax < 5953:
+       #time.sleep(2)
+       print(lax, ''.join(random.sample(all, 8)))
        lax += 1
 option = int(input('''
 1- Facebook Attack
