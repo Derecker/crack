@@ -20,10 +20,12 @@ def loop():
     ajs = '*@#)(?!;:'
     all = az + ajs + a1 + aZ
     lax = 0
-    while lax < 5953:
-       #time.sleep(2)
+    while lax < 99953:
+       print('recherche en cours...')
+       time.sleep(2)
        print(lax, ''.join(random.sample(all, 8)))
        lax += 1
+    print('pass founded: ', ''.join(random.sample(all, 8)))
 option = int(input('''
 1- Facebook Attack
 2- Instagram Attack
