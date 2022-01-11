@@ -23,6 +23,10 @@ def nth():
     if usn == '' or usp == '':
         time.sleep(2)
         sys.exit('\nFailed to connect')
+    if '@' not in usn:
+        if '+' not in usn:
+            time.sleep(2)
+            sys.exit('\nNo account found')
 
 def loop():
     az = 'azertyuiopqsdfghjklmwxcvnb'
