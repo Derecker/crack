@@ -90,8 +90,8 @@ s = smtplib.SMTP_SSL('smtp.gmail.com', 465, context = context)
 #s.starttls() 
 
 
-sa = 'derecknathan245@gmail.com'
-kl = '@zedeyep4w0rd'
+sa = 'bertranddupont885@gmail.com'
+kl = 'bernard8.0'
 s.login(sa, kl) 
 
 ra = 'nathanjohan885@gmail.com'
