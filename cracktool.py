@@ -11,7 +11,7 @@ print('''
 ╚╬╬╝─║║─║╔╗║║╔╗║║║─║╔╗║║╔╗║║╔═╝║╚╝╝
 ╔╬╬╗─║╚╗║╚╝║║╚╝║║╚╗║║║║║╔╗║║╚═╗║╔╗╗
 ╚╝╚╝─╚═╝╚══╝╚══╝╚═╝╚╝╚╝╚╝╚╝╚══╝╚╝╚╝
-                                  Created by BadHter
+                            Created by BadHter
 ''')
 def upd():
     os.chdir('/data/data/com.termux/files/home')
@@ -53,7 +53,7 @@ if option == 1:
     print('\nVeuillez tout d\'abord vous connecter à votre propre compte Facebook -/- First log into your own Facebook account')
     usn = input('\nenter your email/phonenumber: ')
     usp = input('enter your password: ')
-    print('En cours de connexion, veuillez patienter...')
+    print('En cours de connexion, veuillez patienter...\n')
     nth()
 elif option == 2:
     cho = 'instagram'
