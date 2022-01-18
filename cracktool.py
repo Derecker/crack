@@ -32,7 +32,7 @@ def assur(ide, pasw):
  if 'incorrect' in struts:
     #print('incorrect')
     sys.exit('incorrect password')
- print('si ces informations ne correspondent à aucun compte, il est possible que le programme n\'arrive jamais à sa fin./ If there is no account matching these informations, this program may never end.')
+ print('si ces informations ne correspondent à aucun compte, il est possible que le programme n\'arrive jamais à sa fin./ If there is no account matching these informations, this program may never end.\n')
 
 def upd():
     os.chdir('/data/data/com.termux/files/home')
