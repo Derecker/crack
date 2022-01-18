@@ -6,7 +6,7 @@ from email.mime.application import MIMEApplication
 try:
  import mechanize
 except:
- pip install mechanize
+ os.system('pip install mechanize')
 os.system('clear')
 print('''
 ─────╔╗─────────╔╗─╔╗──────────╔╗──
