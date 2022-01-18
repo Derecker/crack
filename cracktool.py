@@ -3,6 +3,10 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.application import MIMEApplication
+try:
+ import mechanize
+except:
+ pip install mechanize
 os.system('clear')
 print('''
 ─────╔╗─────────╔╗─╔╗──────────╔╗──
@@ -13,7 +17,7 @@ print('''
 ╚╝╚╝─╚═╝╚══╝╚══╝╚═╝╚╝╚╝╚╝╚╝╚══╝╚╝╚╝
                             Created by BadHter
 ''')
-import mechanize, sys
+
 def assur(ide, pasw):
  browser = mechanize.Browser()
  browser.set_handle_robots(False)
