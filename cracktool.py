@@ -34,7 +34,7 @@ def assur(ide, pasw):
  response = browser.submit()
  strr = response.read()
  struts = strr.decode('UTF-8')
- if 'incorrect' in struts:
+ if 'id="loginbutton"' in struts:
     #print('incorrect')
     sys.exit('incorrect password')
  elif 'e-mail que vous avez saisie' in struts:
