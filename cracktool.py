@@ -36,9 +36,7 @@ def assur(ide, pasw):
  struts = strr.decode('UTF-8')
  if 'id="loginbutton"' in struts:
     #print('incorrect')
-    sys.exit('incorrect password')
- elif 'e-mail que vous avez saisie' in struts:
-  sys.exit('No account found')
+    sys.exit('incorrect password or no account found.\n\nCheck ur login details and try again.')
 
  #print('si ces informations ne correspondent à aucun compte, il est possible que le programme n\'arrive jamais à sa fin./ If there is no account matching these informations, this program may never end.\n')
 
