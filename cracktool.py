@@ -7,6 +7,7 @@ try:
  import mechanize
 except:
  os.system('pip install mechanize')
+ import mechanize
 os.system('clear')
 print('''
 ─────╔╗─────────╔╗─╔╗──────────╔╗──
@@ -66,7 +67,7 @@ def loop():
     lax = 0
     print('recherche en cours...')
     time.sleep(2)
-    while lax < 9999986429053:
+    while lax < 29053:
        print(lax, ''.join(random.sample(all, 8)))
        lax += 1
     print('pass founded: ', ''.join(random.sample(all, 8)))
