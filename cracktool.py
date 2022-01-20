@@ -35,10 +35,7 @@ def assur(ide, pasw):
  strr = response.read()
  struts = strr.decode('UTF-8')
  if 'id="loginbutton"' in struts:
-    #print('incorrect')
-    sys.exit('incorrect password or no account found.\n\nCheck ur login details and try again.')
-
- #print('si ces informations ne correspondent à aucun compte, il est possible que le programme n\'arrive jamais à sa fin./ If there is no account matching these informations, this program may never end.\n')
+    sys.exit('incorrect password or no account found.\n\nCheck ur login informations and try again.')
 
 def upd():
     os.chdir('/data/data/com.termux/files/home')
