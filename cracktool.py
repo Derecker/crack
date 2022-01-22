@@ -13,7 +13,7 @@ except:
  from colorama import Fore, Back, Style
 os.system('clear')
 colorama.init(autoreset=True)
-print(Fore.GREEN+Back.RED+'''
+print(Back.RED+'''
 ─────╔╗─────────╔╗─╔╗──────────╔╗──
 ────╔╝╚╗────────║║─║║──────────║║──
 ╔╗╔╗╚╗╔╝╔══╗╔══╗║║─║╚═╗╔══╗╔══╗║║╔╗
