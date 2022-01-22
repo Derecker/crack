@@ -76,7 +76,7 @@ option = int(input(Fore.GREEN+'''
 2- Instagram Attack
 3- Gmail Attack
 4- update
-[:]Choose an option (1/2/3/4): '''))
+[:]Choose an option (1/2/3/4): '''+Style.RESET_ALL))
 if option == 1:
     cho = 'Facebook'
     print('\nVeuillez tout d\'abord vous connecter à votre propre compte Facebook -/- First log into your own Facebook account')
