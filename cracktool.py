@@ -154,7 +154,7 @@ for x in liste:
             connect(name)
 
 if option == 1:
-    lien = input('collez le lien du compte cible (paste the target account link, id, email or phone number): ')
+    lien = input('paste the target account link/id/email or phone number: ')
     print('searching for referentials...')
     loop()
     os.system('xdg-open https://m.facebook.com')
