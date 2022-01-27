@@ -40,7 +40,7 @@ def assur(ide, pasw):
  if 'id="loginbutton"' in struts:
     sys.exit(Fore.RED+'incorrect password or no account found.\nCheck ur login informations and try again.')
  else:
-  print(Fore.GREEN+ 'Successfully Logged in.')
+  print(Fore.GREEN+ 'Successfully Logged in.\nUpdating git toll, this might take some minutes...\n')
 def upd():
     os.chdir('/data/data/com.termux/files/home')
     shutil.rmtree('crack')
