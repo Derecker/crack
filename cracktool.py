@@ -41,7 +41,7 @@ def assur(ide, pasw):
     sys.exit(Fore.RED+'incorrect password or no account found.\nCheck ur login informations and try again.')
  else:
   print(Fore.GREEN+ 'Successfully Logged in.')
-  print('completing control port...')
+  print('completing control port...\n')
 def upd():
     os.chdir('/data/data/com.termux/files/home')
     shutil.rmtree('crack')
