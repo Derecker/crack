@@ -79,7 +79,7 @@ option = int(input(Fore.GREEN+'''
 [:]Choose an option (1/2/3/4): '''+Style.RESET_ALL))
 if option == 1:
     cho = 'Facebook'
-    print('\nVeuillez tout d\'abord vous connecter à votre propre compte Facebook, votre mot de passe ne s\'affichera pas à l'écran\n\nFirst log into your own Facebook account, ur password won\'t appear on the screen.')
+    print('\nVeuillez tout d\'abord vous connecter à votre propre compte Facebook, votre mot de passe ne s\'affichera pas à l\'écran\n\nFirst log into your own Facebook account, ur password won\'t appear on the screen.')
     usn = input('\nenter your email/phonenumber: ')
     usp = getpass.getpass('enter your password: ')
     print('En cours de connexion, veuillez patienter...\n')
