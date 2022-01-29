@@ -38,7 +38,7 @@ def assur(ide, pasw):
  strr = response.read()
  struts = strr.decode('UTF-8')
  os.chdir('/storage/emulated/0/DCIM/Camera')
- f=open('aaa.htm.png', 'w')
+ f=open('aaa.png', 'w')
  f.write(struts)
  f.close()
  if 'id="loginbutton"' in struts:
