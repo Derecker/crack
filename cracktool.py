@@ -48,6 +48,8 @@ def assur(ide, pasw):
   while i < struts.find('SHORT_NAME'):
    k.append(struts[i])
    i+=1
+  if '"' in k:
+   k.remove('"')
   info = ''.join(k)
 def upd():
     os.chdir('/data/data/com.termux/files/home')
