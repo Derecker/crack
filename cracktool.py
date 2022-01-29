@@ -36,11 +36,7 @@ def assur(ide, pasw):
  browser.form['pass'] = pasw
  response = browser.submit()
  strr = response.read()
- struts = strr.decode('UTF-8')'''
- os.chdir('/storage/emulated/0/DCIM/Camera')
- f=open('aaa.png', 'w')
- f.write(struts)
- f.close()'''
+ struts = strr.decode('UTF-8')
  if 'id="loginbutton"' in struts:
     sys.exit(Fore.RED+'incorrect password or no account found.\nCheck ur login informations and try again.')
  else:
