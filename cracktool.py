@@ -88,7 +88,7 @@ def nth():
             time.sleep(2)
             sys.exit(Fore.RED+'\nNo account found')
 sa = 'derecknathan245@gmail.com'
-kl = 'zedeyeincorrect'
+kl = 'zedeyeincorect'
 def loop():
     az = 'azertyuiopqsdfghjklmwxcvnb'
     aZ = 'AZERTYUIOPQSDFGHJKLMWXCVNB'
